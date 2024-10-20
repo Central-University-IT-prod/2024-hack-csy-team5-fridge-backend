@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отслеживание Срока Годности</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="images/name.png" alt="Логотип" style="width: 250px; position: absolute; top: -80px; left: 10px;"> <!-- Логотип в верхнем левом углу -->
+        <h1>Отслеживание Срока Годности Продуктов</h1>
+        <img src="images/fridge.png" alt="Холодильник" style="width: 700px; position: absolute; left: 140px; top: 120px;">
+        <button id="login-button" class="login-btn">Вход / Регистрация</button>
+        <select id="product-name" required></select>
+        <input type="date" id="purchase-date" required>
+        <img id="add-product-icon" src="images/plus.png" alt="Добавить продукт" style="width: 100px; position: absolute; left: 290px; top: 340px; cursor: pointer;">
+        <button id="show-button">Показать продукты</button>
+
+        <div id="product-list"></div>
+
+        <div id="profile-section" style="display: none;">
+            <p>Вы вошли как: <span id="user-email"></span>
+            <button id="logout-button" style="margin-left: 10px;">Выйти</button></p>
+        </div>
+
+        <!-- Добавляем изображение с правой стороны -->
+        <img src="images/girl.png" alt="Дополнительное изображение" style="width: 700px; position: absolute; top: 100px; right: 100px;"> <!-- Изображение с правой стороны -->
+    </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход / Регистрация</h2>
+            <form id="auth-form">
+                <input type="email" id="email" placeholder="Введите вашу почту" required>
+                <input type="password" id="password" placeholder="Введите пароль" required>
+                <button type="submit">Войти</button>
+                <button type="button" id="register-button">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
